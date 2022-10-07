@@ -1,0 +1,72 @@
+<div class="body">
+
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <i class="fa fa-times" type="button" aria-hidden="true" routerLink="/"></i>
+          <button id="borrowbutton" class="btn btn-success" data-bs-toggle="modal" (click)="resetDate()" data-bs-target="#exampleModal" type="button">Borrow</button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <img src={{book.imgurl}}>
+        </div>
+        <div class="col" id="col1">
+          <h4 class="book-title"><i>{{book.bookname}}</i></h4><br>
+          <h5 class="book-author"><b style="color:  rgb(0, 30, 128);">Author:</b> {{book.author}}</h5><br>
+          <h5 class="book-year"><b style="color:  rgb(0, 30, 128);">Year:  </b>{{book.year}}</h5><br>
+          <h5 class="book-year"><b style="color:  rgb(0, 30, 128);">Description: <br><br> </b>{{book.description}}</h5>
+        </div>
+      </div>
+     
+    </div>
+</div>
+
+        
+
+   
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel" style="color: grey;">Book Borrow Form</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h2  style="color:  rgb(0, 30, 128);">{{book.bookname}}</h2>
+   
+<!-- form -->
+
+
+
+  <form #bookForm1="ngForm" (ngSubmit)="editForm(bookForm1)">
+    
+    <div class="form-group">
+        <label for="name">Borrow On</label>
+        <input [min]="today" [value]="bookservice.bdate" type="date"  class="form-control" id="bdate" 
+        [(ngModel)]="bookservice.bdate" name="borrowdate">
+      </div>
+      <div class="form-group">
+        <label for="name">Return Date</label>
+        <input type="date" [value]="bookservice.rdate" [min]="today" class="form-control" id="rdate" 
+        [(ngModel)]="bookservice.rdate" name="returndate">
+      </div>
+      <div class="modal-footer">
+        <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-primary"  data-bs-dismiss="modal">Add</button> -->
+      </div>
+
+
+  <button type="button" class="btn btn-primary" (click)="enrollBook(book)" data-bs-dismiss="modal" routerLink="/enrollment">Submit</button>
+</form>
+      </div>
+      <!-- <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div> -->
+    </div>
+  </div>
+</div>
+
+<router-outlet></router-outlet>

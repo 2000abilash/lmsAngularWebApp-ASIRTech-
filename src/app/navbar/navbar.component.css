@@ -1,0 +1,83 @@
+/* Navbar */
+
+.navbar {
+    background-image: url('../../assets/navbarbackground1.jpg');
+}
+
+.nav-logo {
+    border-radius: 50%;
+    border-width: 5px;
+    border-color: rgb(143, 147, 52);
+    border-style: solid;
+}
+
+h3 {
+    color: white;
+    margin-left: 2%;
+    text-shadow: 1px 1px 1px rgb(116, 115, 115);
+
+}
+h3:hover{
+    color: rgb(249, 234, 31);
+}
+
+/* h6{
+    color: rgb(255, 255, 255);
+} */
+
+.btn-outline-success {
+    margin-left: 5px;
+}
+
+/* form {
+    margin-left:40%;
+} */
+
+a{
+    text-decoration: none;
+    padding: 16px;
+    font-size: 26px;
+    color: rgba(238, 236, 236, 0.629);
+    margin: auto;
+}
+a:hover{
+    color: white;
+    transition: 0.3s;
+}
+.links1{
+    margin-left: 70%;
+}
+
+
+.fa-cog{
+color: rgba(238, 236, 236, 0.629);
+font-size: 40px;
+padding-left:6%;
+}
+
+.fa-cog:hover{
+    color: white;
+}
+
+.dropdown-menu{
+height: 450px;
+width: 300px;    
+/* background-image: url('../../assets/navbarbackground1.jpg'); */
+background: rgba(19, 21, 91, 0.88);
+margin-top: 10px;
+border: 4px solid rgba(255, 255, 255, 0.695);
+box-shadow: 4px 6px 4px rgb(73, 72, 72);
+border-radius: 6%;
+}
+
+.myprofile{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    margin-left: 31%;
+    margin-top: 13%;
+    border: 4px solid rgb(198, 147, 53);
+}
+.btn-outline-success{
+  margin-left: 33%;
+}

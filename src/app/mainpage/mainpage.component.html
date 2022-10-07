@@ -1,0 +1,30 @@
+<!-- grid -->
+
+<div class="body">
+<div class="container">
+  <div class="row">
+    <div class="col" *ngFor="let book of books">
+     
+<!-- card -->
+
+<div class="card">
+  <img src={{book.imgurl}}>
+  <div class="card-content">
+    <h4 class="book-title"><i>{{book.bookname}}</i></h4>
+    <h5 class="book-author"><b
+      style="color: rgb(240, 240, 240); font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Author
+      :</b> {{book.author}}</h5>
+    <h5 class="book-year"><b
+      style="color: rgb(220, 218, 218); font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Year
+      :</b>{{book.year}}</h5>
+  </div>
+</div>
+<br>
+<button class="btn btn-success" type="button" (click)="selectedBook(book)" routerLink="/bookdetails">Detail</button>
+<br>
+<br>
+  </div>
+</div>
+</div>
+</div>
+<router-outlet></router-outlet>

@@ -1,0 +1,39 @@
+img{
+    height: 550px;
+    width: 450px;
+    margin-top: 8%;
+    margin-left: 10%;
+    border:  4px 4px 6px solid rgb(90, 89, 89);
+    box-shadow: 2px 8px 8px rgb(17, 41, 59);
+}
+.container{
+    margin-top: 8%;
+}
+#col1{
+    margin-top: 10%;
+   
+}
+h4{
+    color: rgb(0, 30, 128);
+    font-weight: 600;
+    text-decoration: underline;
+}
+.body {
+    background-image: url('../../assets/librarybackground.jpg');
+}  
+.fa-times{
+    margin-left: 100%;
+    font-size: 40px;
+    color: rgb(84, 83, 83);
+}
+.fa-times:hover{
+  
+    color: rgb(251, 1, 1);
+}
+#borrowbutton{
+    margin-left: 68%;
+    margin-top: 16%;
+   position: absolute;
+   border-width: 6px;
+  border-color: rgb(26, 176, 51);
+}

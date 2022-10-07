@@ -1,0 +1,39 @@
+<!-- Navbar -->
+
+<nav class="navbar navbar-expand-sm fixed-top">
+    <div class="container">
+      <img class="nav-logo" src="../../assets/lims.jpg" alt="" width="80px" height="80px">
+      <h3>New York Library</h3><br>
+      <!-- <h6>Satisfy the thirst of knowledge</h6> -->
+  
+      <form class="d-flex">
+        <!-- Button trigger modal -->
+        <!-- <button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+          My Profile
+        </button>
+  
+        <button class="btn btn-outline-success" type="button">Logout</button> -->
+        <a routerLink="/" class="links1">Home</a>
+        
+        <div class="dropdown">
+          <a  class="btn dropdown-toggle"  data-bs-toggle="dropdown" aria-expanded="false">
+            Profile
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+           <div class="profile-card">
+             <img class="myprofile" src="../../assets/Passport_Photograph.jpg">
+             <br>
+             <h5 style="color:white;text-align:center;font-family: monospace;margin-top: 10%;">ABILASH.B.G</h5>
+             <p class="card-text" style="color: rgb(198, 147, 53);text-align: center;font-weight: 800;font-family: monospace;">abilash.bg@.com<br><br><b style="color:white;font-family: monospace;">MEMBER ID : </b>27030-E<br><br><b style="color:white;font-family: monospace;">DOB : </b>15-08-2000</p>
+             <button type="button" class="btn btn-outline-success" routerLink="/enrollment">Your List</button>
+            </div>
+          </ul>
+        </div>
+
+      </form>
+        <i class="fa fa-cog" aria-hidden="true" routerLink="/admindata"></i>
+
+    </div>
+  </nav>
+
+<router-outlet></router-outlet>

@@ -1,0 +1,123 @@
+<div class="body">
+<table class="table">
+    <thead>
+      <tr style="border:2px solid rgb(3, 2, 46) ;">
+        <th scope="col"><b>Book Image</b></th>
+        <th scope="col"><b>Book Name</b></th>
+        <th scope="col"><b>Author</b></th>
+        <th scope="col"><b>Edition</b></th>
+        <th scope="col"><b>Action</b></th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let book of books">
+        <tr>
+            <td><img src="{{book.imgurl}}"></td>
+            <td style="color:rgb(64, 64, 64);font-weight:800;">{{book.bookname}}</td>
+            <td style="color:rgb(90, 90, 90) ;">{{book.author}}</td>
+            <td style="color:rgb(90, 90, 90) ;">{{book.year}}</td>
+            <td>
+               <i class="fa fa-pencil-square-o" data-bs-toggle="modal" data-bs-target="#edit" aria-hidden="true" style="color:blue;" (click)="edit(book)"></i>
+              <i class="fa fa-trash-o" aria-hidden="true" (click)="delete(book)" style="color:red;"></i>
+            </td>
+          </tr>
+
+          <div class="modal fade" id="edit" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form [formGroup]="editbookform" (ngSubmit)="OneditbookForm()">
+                        <div class="form-group">
+                            <label for="name">Book Image</label>
+                            <input type="text"  class="form-control" formControlName="imgurl" id="imgurl">
+                          </div>
+                          <div class="form-group">
+                            <label for="name">Book Name</label>
+                            <input type="text"  class="form-control" id="bookname" 
+                            formControlName="bookname">
+                          </div>
+                          <div class="form-group">
+                            <label for="name">Author</label>
+                            <input type="text"  class="form-control" id="author" 
+                            formControlName="author">
+                          </div>
+                          <div class="form-group">
+                            <label for="name">Edition</label>
+                            <input type="text"  class="form-control" id="year" 
+                            formControlName="year">
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-primary"  data-bs-dismiss="modal">Submit</button>
+                          </div>
+                    </form>
+                </div>
+               
+              </div>
+            </div>
+          </div>
+        
+
+        </tbody>
+      </table>
+    
+      <!-- Button trigger modal -->
+<button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Add Book
+  </button>
+
+</div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form #bookForm="ngForm" (ngSubmit)="onFormSubmit(bookForm)">
+                <div class="form-group">
+                    <label for="name">Book Image</label>
+                    <input type="text"  class="form-control" id="imgurl" 
+                    [(ngModel)]="newBook.imgurl" name="imgurl">
+                  </div>
+                  <div class="form-group">
+                    <label for="name">Book Name</label>
+                    <input type="text"  class="form-control" id="bookname" 
+                    [(ngModel)]="newBook.bookname" name="bookname">
+                  </div>
+                  <div class="form-group">
+                    <label for="name">Author</label>
+                    <input type="text"  class="form-control" id="author" 
+                    [(ngModel)]="newBook.author" name="author">
+                  </div>
+                  <div class="form-group">
+                    <label for="name">Edition</label>
+                    <input type="text"  class="form-control" id="year" 
+                    [(ngModel)]="newBook.year" name="year">
+                  </div>
+                  <div class="form-group">
+                    <label for="name">Description</label>
+                    <input type="text"  class="form-control" id="description"
+                    [(ngModel)]="newBook.description" name="description">
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary"  data-bs-dismiss="modal">Add</button>
+                  </div>
+            </form>
+        </div>
+       
+      </div>
+    </div>
+  </div>
+
+
+
+
+

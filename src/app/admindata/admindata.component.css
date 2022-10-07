@@ -1,0 +1,47 @@
+.body{
+    background-image: url('../../assets/lims1.png');
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+
+background-repeat: no-repeat;
+background-position:center;
+
+}
+.table{
+    margin-top: 8%;
+    width: 80%;
+    margin-left: 10%;
+}
+
+img{
+    height: 60px;
+    width: 50px;
+}
+button{
+    margin-bottom: 8%;
+    margin-left: 46%;
+}
+th{
+    color: green;
+    font-family: monospace;
+}
+.fa-trash-o{
+padding-left: 36px;
+}
+.fa-trash-o:hover{
+    font-size: 40px;
+}
+.fa-pencil-square-o:hover{
+font-size: 28px;
+}
+b{
+    color: rgb(9, 64, 124);
+    font-size: 28px;
+    font-family: monospace;
+    font-weight:800;
+}
+td{
+    font-family: monospace;
+    font-size: 26px;
+}

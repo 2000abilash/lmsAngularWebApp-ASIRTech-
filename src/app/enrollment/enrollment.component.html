@@ -1,0 +1,29 @@
+
+<div class="body">
+<table class="table">
+  <thead>
+    <tr  style="border:2px solid rgb(4, 2, 65) ;">
+      
+      <th scope="col0"><b>Book Name</b></th>
+      <th scope="col1"><b>Author</b></th>
+      <th scope="col2"><b>Edition</b></th>
+      <th scope="col3"><b>Borrow On</b></th>
+      <th scope="col4"><b>Return On</b></th>
+      <th scope="col5"><b>Action</b></th>
+    </tr>
+  </thead>
+  <tbody *ngFor="let book of books">
+ 
+    <tr>
+      <td style="color:rgb(64, 64, 64);font-weight:800;">{{book.book.bookname}}</td>
+      <td style="color:rgb(90,90,90) ;">{{book.book.author}}</td>
+      <td style="color:rgb(90,90,90) ;">{{book.book.year}}</td>
+      <td style="color:rgb(67,67,67) ;">{{book.bdate}}</td>
+      <td style="color:rgb(67,67,67) ;">{{book.rdate}}</td>
+      <td>
+        <i class="fa fa-trash-o" aria-hidden="true" (click)="delete(book)" style="color:red;"></i>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div>
